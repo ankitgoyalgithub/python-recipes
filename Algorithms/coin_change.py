@@ -57,7 +57,7 @@ def coin_change(amount, coins, num_coins):
     return ans
 
 if __name__ == '__main__':
-    coins = [5,6,8,1]
+    coins = [1,5,6,8]
     amount = 7
     print(min_coins(coins, amount))
     print("Number of Solutions:", count_ways(coins, len(coins), amount))

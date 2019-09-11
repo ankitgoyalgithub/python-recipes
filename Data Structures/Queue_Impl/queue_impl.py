@@ -7,13 +7,12 @@ class Queue(object):
         self.data = [0 for i in range(max_size)]
     
     def enqueue(self, data=None):
-        if self.rear == self.max_size - 1:
+        if self.rear == self.max_size:
             raise Exception("Queue Full")
         
         self.data[self.rear] = data
         self.rear += 1
 
-    
     def dequeue(self):
         if self.front == self.rear:
             raise Exception("Queue Empty")
@@ -33,9 +32,4 @@ if __name__ == '__main__':
     q.enqueue(7)
     q.enqueue(8)
     q.enqueue(9)
-    print("Ten Done")
     q.enqueue(10)
-    q.enqueue(11)
-    
-
-        

@@ -141,6 +141,18 @@ class BinaryTree:
                 print(x, end=" ")
         print()
 
+    def max_depth(self, root):
+        if root == None:
+            return 0
+        
+        l_depth = self.max_depth(root.left) 
+        r_depth = self.max_depth(root.right)
+
+        if l_depth > r_depth:
+            return l_depth + 1
+        else:
+            return r_depth + 1
+
 
 
 if __name__ == '__main__':
@@ -166,6 +178,8 @@ if __name__ == '__main__':
     tree.left_view(root)
     tree.right_view(root)
     tree.bottom_view(root)
+
+    print(tree.max_depth(root))
 
 
     
